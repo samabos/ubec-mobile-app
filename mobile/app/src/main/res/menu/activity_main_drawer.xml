@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_twotone_home_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_reports_topmenu"
+            android:title="@string/menu_reports_topmenu">
+            <menu>
+                <item
+                    android:id="@+id/nav_new_report"
+                    android:icon="@drawable/ic_twotone_assignment"
+                    android:title="@string/menu_new_report" />
+                <item
+                    android:id="@+id/nav_reports"
+                    android:icon="@drawable/ic_twotone_reports"
+                    android:title="@string/menu_reports" />
+            </menu>
+        </item>
+        <item
+            android:id="@+id/nav_supplies_topmenu"
+            android:title="@string/menu_supplies_topmenu">
+            <menu>
+                <item
+                    android:id="@+id/nav_new_supply"
+                    android:icon="@drawable/ic_twotone_manage_search"
+                    android:title="@string/menu_new_supply" />
+                <item
+                    android:id="@+id/nav_report_supplies"
+                    android:icon="@drawable/ic_twotone_reports"
+                    android:title="@string/menu_report_supplies" />
+            </menu>
+        </item>
+    </group>
+</menu>

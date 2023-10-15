@@ -1,0 +1,27 @@
+package com.ubec.ubecapp.data.model
+
+ data class ReportModel(
+     var id:String?,
+     var projectId : String?,
+     var location : String?,
+     var lga : String?,
+     var quality : String?,
+     var completionStageId : Int,
+     var completionStage : String?,
+     var completionDesc : String?,
+     var hasDefects : String?,
+     var defectDesc : String?,
+ var transactionId:String?,
+ var coordinate:String?,
+     var status:String?,
+     var inspectionDate:String?,
+ var modifiedBy:String?,
+ var attachment1:String?,
+ var attachment2:String?,
+     var projectType : String?,
+     var contractor : String?,
+     var description : String?,
+     var serialNo:String?,
+     var pId:String?,
+var attachment3:String?,
+var attachment4:String?)

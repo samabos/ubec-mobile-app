@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.ubec.ubecapp.ui.newreport.NewReportViewModel" />
+    </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1300dp"
+        tools:context="com.ubec.ubecapp.ui.newreport.NewReportFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="140dp"
+            app:contentPadding="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_projectinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Project information"
+                android:textIsSelectable="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                android:id="@+id/textLayoutProject"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="@string/text_project"
+                android:layout_marginTop="40dp"
+                app:errorEnabled="true"  >
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete"
+                    android:text="@={viewmodel.project}"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="360dp"
+            app:contentPadding="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <TextView
+                android:id="@+id/tv_projectinfo4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_locationinfo"
+                android:textIsSelectable="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayoutLocation"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="40dp"
+                android:hint="@string/text_location"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="@={viewmodel.location}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayoutState"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="110dp"
+                android:hint="@string/text_state"
+                app:errorEnabled="true">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textAutoComplete"
+                android:text="@={viewmodel.state}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayoutLGA"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginTop="180dp"
+                android:hint="@string/text_lga"
+                app:errorEnabled="true">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete"
+                    android:text="@={viewmodel.lga}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayoutCoordinate"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="@string/text_coordinate"
+                android:layout_marginTop="250dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:text="@={viewmodel.coordinate}"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="0dp"
+            android:layout_height="2200dp"
+            app:contentPadding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+
+            <TextView
+                android:id="@+id/tv_projectinfo9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_statusdetails"
+                android:textIsSelectable="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+android:id="@+id/textLayoutStageCompletion"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="@string/text_stageofcompletion"
+                android:layout_marginTop="40dp"
+                app:errorEnabled="true">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="@={viewmodel.completionStage}"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+ android:id="@+id/textLayoutProductQuality"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="@string/text_projectquality"
+                android:layout_marginTop="110dp"
+                app:errorEnabled="true">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="@={viewmodel.projectQuality}"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayoutDescCompletion"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="@string/text_desccompletion"
+                android:layout_marginTop="180dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:text="@={viewmodel.completionDesc}"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:id="@+id/textLayouthasDefects"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="@string/text_hasdefects"
+                android:layout_marginTop="250dp"
+                app:errorEnabled="true">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="@={viewmodel.hasDefects}"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayoutDescDefects"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="@string/text_descdefects"
+                android:layout_marginTop="320dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="2"
+                    android:text="@={viewmodel.defectDesc}"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLayoutInspectionDate"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="@string/text_inspectiondate"
+                android:layout_marginTop="390dp"
+                app:errorEnabled="true" android:visibility="invisible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:visibility="invisible"
+                    android:text="@={viewmodel.inspectionDate}"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_attachement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="410dp"
+                android:text="@string/text_attachment"
+                android:textIsSelectable="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:id="@+id/textLayoutAttachment"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:hint="@string/text_attachment"
+                android:layout_marginTop="440dp"
+                app:errorEnabled="true">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="@={viewmodel.attachment}"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/imgAttachment1"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_marginTop="500dp" />
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:gravity="center"
+               android:layout_marginTop="770dp">
+               <Button
+                   android:id="@+id/camera_start_button"
+                   android:layout_width="120dp"
+                   android:layout_height="wrap_content"
+                   android:elevation="2dp"
+                   android:scaleType="fitCenter"
+                   android:text="@string/text_start_camera"
+                   android:textSize="10sp"
+                   android:layout_gravity="center_horizontal"/>
+               <Button
+                   android:id="@+id/camera_capture_button"
+                   android:layout_width="120dp"
+                   android:layout_height="wrap_content"
+                   android:elevation="2dp"
+                   android:textSize="10sp"
+                   android:scaleType="fitCenter"
+                   android:text="@string/text_take_photo"
+                   android:layout_gravity="center_horizontal"/>
+           </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_attachement1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="850dp"
+                android:text="@string/text_attachment1"
+                android:textIsSelectable="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="870dp"
+                />
+            <TextView
+                android:id="@+id/tv_attachement2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1130dp"
+                android:text="@string/text_attachment2"
+                android:textIsSelectable="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="1150dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_attachement3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1430dp"
+                android:text="@string/text_attachment3"
+                android:textIsSelectable="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="1460dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_attachement4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1750dp"
+                android:text="@string/text_attachment4"
+                android:textIsSelectable="false"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="1780dp"
+                />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="2050dp"
+                android:text="Submit Report"
+                android:textSize="10sp"
+                android:enabled="@{viewmodel.validator.isDataValid}"/>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+</layout>

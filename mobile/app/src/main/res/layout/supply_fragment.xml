@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.ubec.ubecapp.ui.newsupply.SupplyViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1300dp"
+            tools:context="com.ubec.ubecapp.ui.newsupply.SupplyFragment">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewSupply1"
+                android:layout_width="0dp"
+                android:layout_height="650dp"
+                android:layout_marginTop="16dp"
+                app:contentPadding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_supplyinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/supply_title"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:id="@+id/textLayoutSupplyContractor"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="40dp"
+                    android:hint="@string/text_contractor"
+                    app:errorEnabled="true">
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textAutoComplete"
+                        android:text="@={viewmodel.contractor}" />
+
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutSupplyLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="110dp"
+                    android:hint="@string/text_location"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.location}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutSupplyState"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="180dp"
+                    android:hint="@string/text_state"
+                    app:errorEnabled="true">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textAutoComplete"
+                        android:text="@={viewmodel.state}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutSupplyLGA"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="250dp"
+                    android:hint="@string/text_lga"
+                    app:errorEnabled="true">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textAutoComplete"
+                        android:text="@={viewmodel.lga}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutSupplyCoordinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="320dp"
+                    android:hint="@string/text_coordinate"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:enabled="false"
+                        android:text="@={viewmodel.coordinate}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutSupplyRep"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="390dp"
+                    android:hint="@string/supply_rep"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.representative}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutSupplyRepDesg"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="460dp"
+                    android:hint="@string/supply_rep_desg"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.representativeDesg}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutSupplyRepPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="530dp"
+                    android:hint="@string/supply_rep_phone"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:text="@={viewmodel.representativePhone}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewSupply2"
+                android:layout_width="0dp"
+                android:layout_height="1700dp"
+                app:contentPadding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewSupply1">
+
+
+                <TextView
+                    android:id="@+id/tv_supplyAttchInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/supply_attch_title"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:id="@+id/textLayoutSupplyAttachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_attachment"
+                    android:layout_marginTop="30dp"
+                    app:errorEnabled="true">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:text="@={viewmodel.attachment}"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <androidx.camera.view.PreviewView
+                    android:id="@+id/imgAttachmentSupply"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_marginTop="80dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="350dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/supply_camera_start_button"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:elevation="2dp"
+                        android:scaleType="fitCenter"
+                        android:text="@string/text_start_camera" />
+
+                    <Button
+                        android:id="@+id/supply_camera_capture_button"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:elevation="2dp"
+                        android:scaleType="fitCenter"
+                        android:text="@string/text_take_photo" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_supply_attachement1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="430dp"
+                    android:text="@string/text_attachmentsupply1"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <ImageView
+                    android:id="@+id/imageViewSupply1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="460dp" />
+
+                <TextView
+                    android:id="@+id/tv_supply_attachement2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="730dp"
+                    android:text="@string/text_attachmentsupply2"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <ImageView
+                    android:id="@+id/imageViewSupply2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="760dp" />
+
+                <TextView
+                    android:id="@+id/tv_supply_attachement3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1030dp"
+                    android:text="@string/text_attachmentsupply3"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <ImageView
+                    android:id="@+id/imageViewSupply3"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="1060dp" />
+
+                <TextView
+                    android:id="@+id/tv_supply_attachementsupply4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1330dp"
+                    android:text="@string/text_attachmentsupply4"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <ImageView
+                    android:id="@+id/imageViewSupply4"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="1360dp" />
+
+                <Button
+                    android:id="@+id/btnSubmitSupply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1630dp"
+                    android:enabled="@{viewmodel.validator.isDataValid}"
+                    android:text="Submit" />
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
