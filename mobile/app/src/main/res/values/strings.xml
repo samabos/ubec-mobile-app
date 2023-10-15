@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Ubec App</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Ubec App</string>
+    <string name="nav_header_subtitle">Project Inspection App</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Sign out</string>
+    <string name="action_settings_sync">Download Master Data</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_new_report">Add Inspection Report</string>
+    <string name="menu_reports">View Reports</string>
+    <string name="menu_details">Details</string>
+    <string name="menu_reports_topmenu">Project Inspection</string>
+    <string name="menu_supplies_topmenu">Supply Verification</string>
+    <string name="menu_new_supply">Add Verification Report</string>
+    <string name="menu_new_supply_items">Add Supply items</string>
+    <string name="menu_report_supplies">Supply Verifications</string>
+
+    <string name="text_description">Description</string>
+    <string name="text_location">Location</string>
+    <string name="text_descdefects">Description of Defects</string>
+    <string name="text_desccompletion">Description of Completion</string>
+    <string name="text_projectquality">Project Quality</string>
+    <string name="text_statusdetails">Status Details</string>
+    <string name="text_stageofcompletion">Stage of Completion</string>
+    <string name="text_state">State</string>
+    <string name="text_lga">LGA</string>
+    <string name="text_locationinfo">Location Information</string>
+    <string name="text_contractor">Contractor</string>
+    <string name="text_project">Project(Serial No.)</string>
+    <string name="text_hasdefects">Has Defect?</string>
+    <string name="text_serialno">Serial No.</string>
+    <string name="text_coordinate">Coordinate</string>
+    <string name="text_inspectiondate">Inspection Date</string>
+    <string name="text_attachmentplaceholer">Tap to Upload Picture</string>
+    <string name="text_attachment">Attachments</string>
+    <string name="text_attachment1">Project symbol</string>
+    <string name="text_attachment2">Front view</string>
+    <string name="text_attachment3">Back view</string>
+    <string name="text_attachment4">Inside view</string>
+
+    <string name="text_attachmentsupply1">Picture 1</string>
+    <string name="text_attachmentsupply2">Picture 2</string>
+    <string name="text_attachmentsupply3">Picture 3</string>
+    <string name="text_attachmentsupply4">Picture 4</string>
+    <string name="text_start_camera">Start Camera</string>
+    <string name="text_take_photo">Take Picture</string>
+    <string name="title">Projects Assigned</string>
+    <string name="secondary_text">Assigned UBEC projects currently inprogress nation-wide.</string>
+    <string name="action_1">Submit Status Report</string>
+
+    <string name="title_supply">Supplies Verification</string>
+    <string name="secondary_text_supply">UBEC supply verification done.</string>
+    <string name="action_2">Perform Verification Task</string>
+
+    <string name="action_upload">Upload to Server</string>
+    <string name="projectcount">0</string>
+    <string name="text_items">Items</string>
+    <string name="text_add_item">Add Item</string>
+    <string name="text_item_serialno">Serial Number</string>
+    <string name="text_item_description">Item Description</string>
+    <string name="text_item_quantity_ordered">Quantity Ordered</string>
+    <string name="text_item_quantity_delivered">Quantity Delivered</string>
+    <string name="text_item_remarks">Remarks</string>
+    <string name="text_delete">Delete</string>
+    <string name="text_back_supply">Back to Supply List</string>
+
+
+    <string name="supply_title"> Supply Details</string>
+    <string name="supply_attch_title">Supply Attachments</string>
+    <string name="supply_rep">Representative</string>
+    <string name="supply_rep_desg">Representative Designation</string>
+    <string name="supply_rep_phone">Representative Phone No.</string>
+    <string name="supply_item_title"> Supply Item Details</string>
+
+</resources>

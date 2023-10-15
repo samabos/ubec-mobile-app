@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ubec.ubecapp.ui.reports.ReportsFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.ubec.ubecapp.ui.details.DetailsViewModel" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1300dp"
+            tools:context="com.ubec.ubecapp.ui.newreport.NewReportFragment">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="270dp"
+                app:contentPadding="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_projectinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Project information"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_project"
+                    android:layout_marginTop="40dp"
+                    app:errorEnabled="true"  >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@={viewmodel.project}"
+                        android:inputType="text"
+                        android:enabled="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutContractor"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_contractor"
+                    android:layout_marginTop="110dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@={viewmodel.contractor}"
+                        android:inputType="text"
+                        android:enabled="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_description"
+                    android:layout_marginTop="180dp"
+                    app:errorEnabled="true"  >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@={viewmodel.description}"
+                        android:inputType="text"
+                        android:enabled="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="270dp"
+                app:contentPadding="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                <TextView
+                    android:id="@+id/tv_projectinfo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_locationinfo"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="40dp"
+                    android:hint="@string/text_location"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.location}"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutLGA"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="110dp"
+                    android:hint="@string/text_lga"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.lga}"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutCoordinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_coordinate"
+                    android:layout_marginTop="180dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.coordinate}"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="0dp"
+                android:layout_height="2000dp"
+                app:contentPadding="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+
+                <TextView
+                    android:id="@+id/tv_projectinfo9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_statusdetails"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutStageCompletion"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_stageofcompletion"
+                    android:layout_marginTop="40dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.completionStage}"
+                        android:enabled="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutProductQuality"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_projectquality"
+                    android:layout_marginTop="110dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.projectQuality}"
+                        android:enabled="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutDescCompletion"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_desccompletion"
+                    android:layout_marginTop="180dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:lines="2"
+                        android:text="@={viewmodel.completionDesc}"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayouthasDefects"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_hasdefects"
+                    android:layout_marginTop="250dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:text="@={viewmodel.hasDefects}"
+                        android:enabled="false"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutDescDefects"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_descdefects"
+                    android:layout_marginTop="320dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:lines="2"
+                        android:text="@={viewmodel.defectDesc}"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textLayoutInspectionDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:hint="@string/text_inspectiondate"
+                    android:layout_marginTop="390dp"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:text="@={viewmodel.inspectionDate}"
+                        android:enabled="false"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_attachement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="460dp"
+                    android:text="@string/text_attachment"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <TextView
+                    android:id="@+id/tv_attachement1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="480dp"
+                    android:text="@string/text_attachment1"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="510dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_attachement2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="780dp"
+                    android:text="@string/text_attachment2"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="800dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_attachement3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1070dp"
+                    android:text="@string/text_attachment3"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="1100dp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_attachement4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1370dp"
+                    android:text="@string/text_attachment4"
+                    android:textIsSelectable="false"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="1400dp"
+                    />
+
+
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="58dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1700dp"
+                    android:textSize="10sp"
+                    android:text="Upload Report"
+                    app:icon="@drawable/ic_baseline_cloud_upload"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

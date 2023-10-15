@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ubec.ubecapp.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_new_report"
+            app:destination="@id/nav_new_report"
+            />
+        <action
+            android:id="@+id/action_nav_home_to_nav_new_supply"
+            app:destination="@id/nav_new_supply" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_new_report"
+        android:name="com.ubec.ubecapp.ui.newreport.NewReportFragment"
+        android:label="@string/menu_new_report"
+        tools:layout="@layout/new_report_fragment" >
+        <action
+            android:id="@+id/action_nav_new_report_to_nav_reports"
+            app:destination="@id/nav_reports" />
+        <action
+            android:id="@+id/action_nav_new_report_to_nav_details"
+            app:destination="@id/nav_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_reports"
+        android:name="com.ubec.ubecapp.ui.reports.ReportsFragment"
+        android:label="@string/menu_reports"
+        tools:layout="@layout/reports_fragment" >
+        <action
+            android:id="@+id/action_nav_reports_to_nav_details"
+            app:destination="@id/nav_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_details"
+        android:name="com.ubec.ubecapp.ui.details.DetailsFragment"
+        android:label="@string/menu_details"
+        tools:layout="@layout/details_fragment" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_details_to_nav_reports"
+            app:destination="@id/nav_reports" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_new_supply"
+        android:name="com.ubec.ubecapp.ui.newsupply.SupplyFragment"
+        android:label="@string/menu_new_supply"
+        tools:layout="@layout/supply_fragment"
+        >
+        <action
+            android:id="@+id/action_nav_new_supply_to_nav_new_supply_items"
+            app:destination="@id/nav_new_supply_items" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_new_supply_items"
+        android:name="com.ubec.ubecapp.ui.newsupplyitems.ItemFragment"
+        android:label="@string/menu_new_supply_items"
+        tools:layout="@layout/fragment_item_list"
+        >
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_new_supply_items_to_nav_report_supplies"
+            app:destination="@id/nav_report_supplies" />
+        <action
+            android:id="@+id/action_nav_new_supply_items_to_nav_supplt_item"
+            app:destination="@id/nav_supplt_item" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_report_supplies"
+        android:name="com.ubec.ubecapp.ui.supplies.SuppliesFragment"
+        android:label="@string/menu_report_supplies"
+        tools:layout="@layout/fragment_supplies_list"
+        >
+        <action
+            android:id="@+id/action_nav_report_supplies_to_nav_new_supply_items"
+            app:destination="@id/nav_new_supply_items" />
+        <action
+            android:id="@+id/action_nav_report_supplies_to_nav_details_supply"
+            app:destination="@id/nav_details_supply" />
+        <action
+            android:id="@+id/action_nav_report_supplies_to_nav_new_supply"
+            app:destination="@id/nav_new_supply" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_supplt_item"
+        android:name="com.ubec.ubecapp.ui.newsupplyitems.UpdateFragment"
+        android:label="@string/supply_item_title"
+        tools:layout="@layout/update_fragment">
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="supplyId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_nav_supplt_item_to_nav_new_supply_items"
+            app:destination="@id/nav_new_supply_items" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_details_supply"
+        android:name="com.ubec.ubecapp.ui.details.SupplyDetailsFragment"
+        tools:layout="@layout/supply_details_fragment">
+        <argument
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_nav_details_supply_to_nav_report_supplies"
+            app:destination="@id/nav_report_supplies" />
+    </fragment>
+
+</navigation>
